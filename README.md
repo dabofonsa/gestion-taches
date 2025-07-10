@@ -16,7 +16,7 @@ L’application permet de manipuler les tâches avec un CRUD complet et une inte
 - Node.js & npm  
 - MySQL 8.0
 
-Cloner le dépôt  et vous aurez le backend et le frontend
+## Cloner le dépôt  et vous aurez le backend et le frontend
 
 ### Backend 
 1. Installer les dépendances avec `npm install`  
@@ -31,8 +31,7 @@ Cloner le dépôt  et vous aurez le backend et le frontend
 2. Démarrer l’application React : npm start
 
 
-
-Choix techniques
+## Choix techniques
 
 ### Backend
 NestJS : Framework Node.js structuré, supportant TypeScript, et idéal pour API REST.
@@ -43,8 +42,6 @@ Gestion des erreurs et validation : Validation des données reçues pour sécuri
 Endpoints REST : CRUD complet pour les tâches, notamment création, édition, suppression, récupération.
 Postman: Permet de tester les requetes HTTP CRUD.
 
-
-
 ### Frontend
 React avec hooks pour gérer l’état et les effets (useState, useEffect).
 Fetch API pour interagir avec le backend via les endpoints REST.
@@ -53,9 +50,7 @@ Lucide-react pour une bibliothèque d’icônes moderne et légère.
 Gestion de l’édition en ligne, ajout de tâches, suppression via appels API.
 
 
-
-
-Fonctionnalités réalisées:
+## Fonctionnalités réalisées:
 Récupération, affichage et filtrage des tâches.
 Création et édition des tâches côté backend et frontend (implémentées dans les zones @todo).
 Suppression des tâches côté frontend, utilisant le point API backend existant.
@@ -63,13 +58,12 @@ Notifications pour confirmer les actions utilisateurs.
 Ajout de données en base avant démarrage pour faciliter les tests.
 
 
-
-Difficultés et points d’attention:
+## Difficultés et points d’attention:
 Comprendre la structure NestJS et Prisma pour la gestion des migrations et des modèles.
 La synchronisation des données entre frontend et backend, notamment lors de la modification inline.
 Configuration CORS entre frontend et backend pour éviter les erreurs de requêtes.
 Respecter la consigne d’utiliser uniquement yarn et non npm.
 
 
-Bonus réalisé
+## Bonus réalisé
 Ajout d’un système de tri par date de création et un filtre par priorité des tâches.
