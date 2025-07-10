@@ -34,20 +34,20 @@ L’application permet de manipuler les tâches avec un CRUD complet et une inte
 ## Choix techniques
 
 ### Backend
-# NestJS : Framework Node.js structuré, supportant TypeScript, et idéal pour API REST.
-# Prisma : Pour gérer les migrations et les requêtes SQL avec MySQL de manière typée et simple.
-# MySQL 8.0 : Base de données relationnelle stable, facile à utiliser avec Prisma.
-# Structure modulaire : Organisation claire des modules, contrôleurs, et services pour faciliter la maintenance.
-# Gestion des erreurs et validation : Validation des données reçues pour sécuriser l’API.
-# Endpoints REST : CRUD complet pour les tâches, notamment création, édition, suppression, récupération.
-# Postman: Permet de tester les requetes HTTP CRUD.
+#### NestJS : Framework Node.js structuré, supportant TypeScript, et idéal pour API REST.
+#### Prisma : Pour gérer les migrations et les requêtes SQL avec MySQL de manière typée et simple.
+#### MySQL 8.0 : Base de données relationnelle stable, facile à utiliser avec Prisma.
+#### Structure modulaire : Organisation claire des modules, contrôleurs, et services pour faciliter la maintenance.
+#### Gestion des erreurs et validation : Validation des données reçues pour sécuriser l’API.
+#### Endpoints REST : CRUD complet pour les tâches, notamment création, édition, suppression, récupération.
+#### Postman: Permet de tester les requetes HTTP CRUD.
 
 ### Frontend
-React avec hooks pour gérer l’état et les effets (useState, useEffect).
-Fetch API pour interagir avec le backend via les endpoints REST.
-react-toastify pour afficher des notifications utilisateur (succès, erreurs).
-Lucide-react pour une bibliothèque d’icônes moderne et légère.
-Gestion de l’édition en ligne, ajout de tâches, suppression via appels API.
+#### React avec hooks pour gérer l’état et les effets (useState, useEffect).
+#### Fetch API pour interagir avec le backend via les endpoints REST.
+#### react-toastify pour afficher des notifications utilisateur (succès, erreurs).
+#### Lucide-react pour une bibliothèque d’icônes moderne et légère.
+#### Gestion de l’édition en ligne, ajout de tâches, suppression via appels API.
 
 
 ## Fonctionnalités réalisées:
