@@ -8,7 +8,6 @@ Ce projet est une application fullstack pour la gestion de tâches :
 
 L’application permet de manipuler les tâches avec un CRUD complet et une interface utilisateur simple et intuitive.
 
----
 
 ## Installation et mise en place
 
@@ -43,27 +42,27 @@ L’application permet de manipuler les tâches avec un CRUD complet et une inte
 - Postman: Permet de tester les requetes HTTP CRUD.
 
 ### Frontend
-#### React avec hooks pour gérer l’état et les effets (useState, useEffect).
-#### Fetch API pour interagir avec le backend via les endpoints REST.
-#### react-toastify pour afficher des notifications utilisateur (succès, erreurs).
-#### Lucide-react pour une bibliothèque d’icônes moderne et légère.
-#### Gestion de l’édition en ligne, ajout de tâches, suppression via appels API.
+- React avec hooks pour gérer l’état et les effets (useState, useEffect).
+- Fetch API pour interagir avec le backend via les endpoints REST.
+- react-toastify pour afficher des notifications utilisateur (succès, erreurs).
+- Lucide-react pour une bibliothèque d’icônes moderne et légère.
+- Gestion de l’édition en ligne, ajout de tâches, suppression via appels API.
 
 
 ## Fonctionnalités réalisées:
-Récupération, affichage et filtrage des tâches.
-Création et édition des tâches côté backend et frontend (implémentées dans les zones @todo).
-Suppression des tâches côté frontend, utilisant le point API backend existant.
-Notifications pour confirmer les actions utilisateurs.
-Ajout de données en base avant démarrage pour faciliter les tests.
+- Récupération, affichage et filtrage des tâches.
+- Création, édition et suppression des tâches côté backend et frontend (implémentées dans les zones @todo).
+- Suppression des tâches côté frontend, utilisant le point API backend existant.
+- Notifications pour confirmer les actions utilisateurs.
+- Ajout de données en base avant démarrage pour faciliter les tests.
 
 
 ## Difficultés et points d’attention:
-Comprendre la structure NestJS et Prisma pour la gestion des migrations et des modèles.
-La synchronisation des données entre frontend et backend, notamment lors de la modification inline.
-Configuration CORS entre frontend et backend pour éviter les erreurs de requêtes.
-Respecter la consigne d’utiliser uniquement yarn et non npm.
+- Comprendre la structure NestJS et Prisma pour la gestion des migrations et des modèles.
+- La synchronisation des données entre frontend et backend, notamment lors de la modification inline.
+- Configuration CORS entre frontend et backend pour éviter les erreurs de requêtes.
+- Respecter la consigne d’utiliser uniquement yarn et non npm.
 
 
 ## Bonus réalisé
-Ajout d’un système de tri par date de création et un filtre par priorité des tâches.
+- Ajout d’un système de tri par date de création et un filtre par priorité des tâches.
