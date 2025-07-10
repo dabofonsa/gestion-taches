@@ -1,70 +1,75 @@
-# Gestionnaire de Tâches 
+# Gestionnaire de Tâches
 
 ## Description du projet
-Ce projet est une application fullstack pour la gestion de tâches.  
-- **Frontend** : Application React permettant de créer, afficher, modifier, supprimer et filtrer des tâches.  
-- **Backend** : API REST en NestJS fournissant les endpoints pour manipuler les tâches stockées dans une base de données MYSQL Wokbench.
+
+Ce projet est une application fullstack pour la gestion de tâches :  
+- Frontend : Application React pour créer, modifier, supprimer et afficher des tâches.  
+- Backend : API NestJS pour gérer les tâches, connectée à une base de données MySQL (MySQL Workbench) via Prisma.  
+
+L’application permet de manipuler les tâches avec un CRUD complet et une interface utilisateur simple et intuitive.
 
 ---
 
-## Partie Backend
+## Installation et mise en place
 
-### Choix techniques
+### Prérequis
+- Node.js & npm  
+- MySQL 8.0
 
-- **Node.js avec NestJS** :  
-  J’ai utilisé Node.js pour sa simplicité et son intégration facile avec JavaScript côté frontend. NestJS a été privilégié pour sa structure modulaire et ses fonctionnalités avancées, mais Express peut aussi être utilisé pour un backend plus léger.
+Cloner le dépôt  et vous aurez le backend et le frontend
 
-- **Base de données** :  
-  Utilisation d’une base de données relationnelleMySQL pour stocker les tâches.  
-  Les tâches ont des champs typiques : id, titre, description, priorité, statut, date de création, etc.
+### Backend 
+1. Installer les dépendances avec `npm install`  
+2. Configurer la base de données MySQL selon le fichier `.env` (hôte, utilisateur, mot de passe, nom de la base)  
+3. Lancer MySQL localement 
+4. Exécuter la migration Prisma avec la commande :  npm prisma migrate dev --name init
+5. Démarrer le serveur backend : npm run start
 
-- **Architecture RESTful** :  
-  Le backend expose des routes claires :  
-  - GET `/api/tasks` : récupérer toutes les tâches  
-  - POST `/api/tasks` : créer une nouvelle tâche  
-  - PUT `/api/tasks/:id` : modifier une tâche  
-  - DELETE `/api/tasks/:id` : supprimer une tâche
 
-### Points rencontrés
+### Frontend
+1. Installer les dépendances avec: npm install
+2. Démarrer l’application React : npm start
 
-- **Gestion des erreurs** :  
-  J’ai mis en place un système de gestion des erreurs HTTP (400, 404, 500) avec des messages clairs.
 
-- **Validation des données** :  
-  Validation côté backend des champs reçus pour éviter les données invalides.
 
-- **CORS** :  
-  Configuration CORS pour autoriser les requêtes depuis le frontend React sur un autre port.
+Choix techniques
 
-- **Déploiement** :  
-  Prévoir un déploiement possible en mode production avec gestion des variables d’environnement.
+### Backend
+NestJS : Framework Node.js structuré, supportant TypeScript, et idéal pour API REST.
+Prisma ORM : Pour gérer les migrations et les requêtes SQL avec MySQL de manière typée et simple.
+MySQL 8.0 : Base de données relationnelle stable, facile à utiliser avec Prisma.
+Structure modulaire : Organisation claire des modules, contrôleurs, et services pour faciliter la maintenance.
+Gestion des erreurs et validation : Validation des données reçues pour sécuriser l’API.
+Endpoints REST : CRUD complet pour les tâches, notamment création, édition, suppression, récupération.
+Postman: Permet de tester les requetes HTTP CRUD.
 
----
 
-## Partie Frontend
 
-### Choix techniques
+### Frontend
+React avec hooks pour gérer l’état et les effets (useState, useEffect).
+Fetch API pour interagir avec le backend via les endpoints REST.
+react-toastify pour afficher des notifications utilisateur (succès, erreurs).
+Lucide-react pour une bibliothèque d’icônes moderne et légère.
+Gestion de l’édition en ligne, ajout de tâches, suppression via appels API.
 
-- **React avec hooks (useState, useEffect)**  
-- **react-toastify pour notifications**  
-- **Lucide-react pour les icônes**  
-- **Fetch API pour communiquer avec le backend**
 
-### Fonctionnalités
 
-- Liste des tâches avec possibilité de filtre par priorité et statut  
-- Recherche textuelle  
-- Ajout / modification / suppression des tâches  
-- Confirmation avant suppression  
-- Gestion des erreurs de communication avec le backend (affichage de messages d’erreur ou fallback)
 
-### Difficultés rencontrées
+Fonctionnalités réalisées:
+Récupération, affichage et filtrage des tâches.
+Création et édition des tâches côté backend et frontend (implémentées dans les zones @todo).
+Suppression des tâches côté frontend, utilisant le point API backend existant.
+Notifications pour confirmer les actions utilisateurs.
+Ajout de données en base avant démarrage pour faciliter les tests.
 
-- Gestion de l’état d’édition inline dans les listes  
-- Synchronisation des données avec le backend pour éviter les conflits  
-- Gestion des erreurs réseau et affichage d’un fallback
 
----
 
-## Structure du projet
+Difficultés et points d’attention:
+Comprendre la structure NestJS et Prisma pour la gestion des migrations et des modèles.
+La synchronisation des données entre frontend et backend, notamment lors de la modification inline.
+Configuration CORS entre frontend et backend pour éviter les erreurs de requêtes.
+Respecter la consigne d’utiliser uniquement yarn et non npm.
 
+
+Bonus réalisé
+Ajout d’un système de tri par date de création et un filtre par priorité des tâches.
